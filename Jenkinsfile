@@ -1,7 +1,7 @@
 node{
      
     stage('SCM Checkout'){
-        git url: 'https://github.com/MithunTechnologiesDevOps/java-web-app-docker.git',branch: 'master'
+        git 'https://github.com/Kris0693/java-web-app-docker.git'
     }
     
     stage(" Maven Clean Package"){
@@ -11,7 +11,7 @@ node{
       
     } 
     
-     # docker image 1
+     # docker image 2
      
     stage('Build Docker Image'){
         sh 'docker build -t dockerhandson/java-web-app .'
